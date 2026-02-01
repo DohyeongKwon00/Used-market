@@ -124,7 +124,7 @@ a {
   height: 42px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  padding: 0 42px 0 38px;
+  padding: 0 14px 0 38px;
   font-size: 15px;
   outline: none;
   background: var(--color-hover-bg);
@@ -133,26 +133,6 @@ a {
 
 .search-bar input:focus {
   border-color: var(--color-primary);
-}
-
-.search-submit-btn {
-  position: absolute;
-  right: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  color: #fff;
-  background: var(--color-primary);
-  transition: background 0.15s;
-}
-
-.search-submit-btn:hover {
-  background: #e5630d;
 }
 
 /* ── Popular searches ───────────────────────── */

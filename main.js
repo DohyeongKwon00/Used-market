@@ -271,16 +271,6 @@ searchInput.addEventListener("input", (e) => {
   render();
 });
 
-// Search submit button
-document.getElementById("searchSubmitBtn").addEventListener("click", () => {
-  searchQuery = searchInput.value;
-  if (activePopularTag) {
-    activePopularTag.classList.remove("active");
-    activePopularTag = null;
-  }
-  render();
-});
-
 // Like button delegation
 grid.addEventListener("click", (e) => {
   const likeBtn = e.target.closest(".like-btn");
