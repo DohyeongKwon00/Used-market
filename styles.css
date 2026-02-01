@@ -461,21 +461,56 @@ a {
   font-size: 15px;
 }
 
-/* ── Responsive ─────────────────────────────── */
+/* ── Responsive (phone / desktop only) ─────── */
 
 @media (max-width: 767px) {
+  /* Hide popular searches on phone */
+  .popular-searches {
+    display: none;
+  }
+
+  /* Stack sidebar above grid */
+  .content-layout {
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .sidebar {
+    width: 100%;
+    position: static;
+    display: flex;
+    gap: 16px;
+  }
+
+  .sidebar-section {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  /* Collapsible filter sections */
+  .sidebar-title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar-title::after {
+    content: "\25BC";
+    font-size: 10px;
+    transition: transform 0.2s;
+  }
+
+  .sidebar-section.collapsed .sidebar-title::after {
+    transform: rotate(-90deg);
+  }
+
+  .sidebar-section.collapsed .sidebar-list {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }

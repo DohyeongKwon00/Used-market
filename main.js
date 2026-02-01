@@ -285,5 +285,32 @@ grid.addEventListener("click", (e) => {
   render();
 });
 
+// Collapsible sidebar sections on mobile
+function initMobileCollapse() {
+  const sections = document.querySelectorAll(".sidebar-section");
+  const isMobile = () => window.matchMedia("(max-width: 767px)").matches;
+
+  sections.forEach((section) => {
+    if (isMobile()) section.classList.add("collapsed");
+
+    section.querySelector(".sidebar-title").addEventListener("click", () => {
+      if (!isMobile()) return;
+      section.classList.toggle("collapsed");
+    });
+  });
+
+  window.matchMedia("(max-width: 767px)").addEventListener("change", (e) => {
+    sections.forEach((section) => {
+      if (e.matches) {
+        section.classList.add("collapsed");
+      } else {
+        section.classList.remove("collapsed");
+      }
+    });
+  });
+}
+
+initMobileCollapse();
+
 // Initial render
 render();
