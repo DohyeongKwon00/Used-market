@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAUEL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="/" class="logo">
+          <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="11" fill="#FF6F0F"/>
+            <path d="M8 12.5L11 15.5L16.5 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo-text">GAUEL</span>
+        </a>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" aria-label="Chat">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Profile">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+      </div>
+    </div>
+    <div class="popular-searches" id="popularSearches">
+      <span class="popular-label">Popular:</span>
+      <div class="popular-tags">
+        <button class="popular-tag" data-query="iPhone">iPhone</button>
+        <button class="popular-tag" data-query="Nike">Nike</button>
+        <button class="popular-tag" data-query="IKEA">IKEA</button>
+        <button class="popular-tag" data-query="Sony">Sony</button>
+        <button class="popular-tag" data-query="LEGO">LEGO</button>
+        <button class="popular-tag" data-query="Samsung">Samsung</button>
+        <button class="popular-tag" data-query="Patagonia">Patagonia</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="content-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Location</h3>
+          <ul class="sidebar-list" id="locationList">
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="all" checked>
+                <span class="checkmark"></span>
+                <span class="check-label">All Areas</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="Downtown">
+                <span class="checkmark"></span>
+                <span class="check-label">Downtown</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="Lake View">
+                <span class="checkmark"></span>
+                <span class="check-label">Lake View</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="College Hills">
+                <span class="checkmark"></span>
+                <span class="check-label">College Hills</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="Bluffs">
+                <span class="checkmark"></span>
+                <span class="check-label">Bluffs</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="Santa Rita">
+                <span class="checkmark"></span>
+                <span class="check-label">Santa Rita</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="Southland">
+                <span class="checkmark"></span>
+                <span class="check-label">Southland</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="Rio Vista">
+                <span class="checkmark"></span>
+                <span class="check-label">Rio Vista</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="checkbox" value="Fort Concho">
+                <span class="checkmark"></span>
+                <span class="check-label">Fort Concho</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Category</h3>
+          <ul class="sidebar-list" id="categoryList">
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="all" checked>
+                <span class="checkmark radio"></span>
+                <span class="check-label">All</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="electronics">
+                <span class="checkmark radio"></span>
+                <span class="check-label">Electronics</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="furniture">
+                <span class="checkmark radio"></span>
+                <span class="check-label">Furniture</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="clothing">
+                <span class="checkmark radio"></span>
+                <span class="check-label">Clothing</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="sports">
+                <span class="checkmark radio"></span>
+                <span class="check-label">Sports</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="books">
+                <span class="checkmark radio"></span>
+                <span class="check-label">Books</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="kitchen">
+                <span class="checkmark radio"></span>
+                <span class="check-label">Kitchen</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-check">
+                <input type="radio" name="category" value="toys">
+                <span class="checkmark radio"></span>
+                <span class="check-label">Toys</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="product-grid" id="productGrid"></section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Help</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 GAUEL. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
