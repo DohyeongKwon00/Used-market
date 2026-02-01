@@ -271,6 +271,12 @@ searchInput.addEventListener("input", (e) => {
   render();
 });
 
+// Search submit button
+document.getElementById("searchSubmit").addEventListener("click", () => {
+  searchQuery = searchInput.value;
+  render();
+});
+
 // Like button delegation
 grid.addEventListener("click", (e) => {
   const likeBtn = e.target.closest(".like-btn");
